@@ -18,41 +18,69 @@ img {
 }
 
 a {
+    display: block;
     color: inherit;
     text-decoration: none;
 }
 
 p a, li a {
-    color: blue;
+    display: inline-block;
+    color: rgb(99, 189, 245);
     text-decoration: underline;
 }
+
+/* SETTINGS */
+html {
+    --color: light pink;
+    --black: #333;
+    --light: rgb(99, 189, 245);
+    --white: #fefefe;
+    --dark: #1F2937;
+    --quote-background: #E5E7EB;
+    --quote-text: #1F2937;
+    --button-color: #3882F6;
+
+}
+
 
 /* STRUCTURE */
 /* https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/ */
 body {
     display: flex;
     flex-direction: column;
-    border: 10px solid blue;
     min-height: 100vh;
 }
 
 main {
     flex-grow: 1;
-    border: 10px solid pink;
 }
 
 inner-column {
-    display: block;
-    border: 4px solid rgb(212, 87, 212);
+    display: block;    
     padding: 10px;
+    /*added later*/
+    max-width: 800px;
+    width: 98%;
+    margin-right: auto;
+    margin-left: auto;
+    /**/
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+}
+
+header inner-column {
+    padding: 12px;
+}
+
+footer inner-column {
+    padding: 12px;
 }
 
 /* DEV STYLES */
 /* body * {
     border: 1px solid blue;
     padding: 1px;
-} */
-
+}
 
 header, footer, main {
     border: 4px solid red;
@@ -61,32 +89,96 @@ header, footer, main {
 section {
     border: 4px solid lime;
 }
+inner-column {
+    border: 4px solid rgb(212, 87, 212);
+}
+main {
+    border: 10px solid pink;
+}
+graphic-div {
+    border: 2px solid black;
+} */
+
+
+/* TYPOGRAPHY */
+
+.large-text {
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+@media (min-width: 700px) {
+    .large-text {
+        font-size: 40px;
+    }
+    .normal-text {
+        font-size: 1.5rem;
+    }
+}
+
+.normal-text {
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1;
+}
+
+/* COMPONENTS */
+.button {
+    font-family: sans-serif;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 100;
+    border-radius: 5px;
+    padding: 0.7rem 1rem;
+    color: white;
+    background-color: var(--dark);
+    margin-bottom: 2px;
+}
 
 /* MODULES */
 graphic-div {
-    display: block;
-    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 graphic-div picture {
     display: block;
-    border: 1px solid yellow;
+    max-width: 500px;
 }
 
 graphic-div text-content {
     display: block;
-    border: 1px solid yellow;
 }
 
+graphic-div text-content p{
+    margin-top: 12px;
+}
 
+graphic-div text-content a{
+    margin-top: 12px;
+}
 
 @media (min-width: 700px) {
     graphic-div {
-        display: flex;
-        flex-direction: row-reverse;
+    flex-direction: row-reverse;
     }
 
     graphic-div :is(text-content, picture) {
-        flex-basis: 50%;
+    flex-basis: 50%;
+
     }
 }    
+
+.welcome {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.welcome .button {
+    background-color: var(--button-color);
+    color: var(--white);
+}
