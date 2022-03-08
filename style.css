@@ -59,7 +59,7 @@ inner-column {
     display: block;    
     padding: 10px;
     /*added later*/
-    max-width: 800px;
+    max-width: 1000px;
     width: 98%;
     margin-right: auto;
     margin-left: auto;
@@ -173,6 +173,16 @@ graphic-div text-content a{
     }
 }    
 
+tiles .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1em;
+}
+
+product-card {
+    display: block;
+}
+
 .welcome {
     background-color: var(--dark);
     color: var(--white);
@@ -181,4 +191,9 @@ graphic-div text-content a{
 .welcome .button {
     background-color: var(--button-color);
     color: var(--white);
+}
+
+.quotes {
+    background-color: var(--quote-background);
+    color: var(--quote-text);
 }
