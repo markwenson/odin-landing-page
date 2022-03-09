@@ -64,8 +64,8 @@ inner-column {
     margin-right: auto;
     margin-left: auto;
     /**/
-    padding-top: 8vh;
-    padding-bottom: 8vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 
 header inner-column {
@@ -77,10 +77,10 @@ footer inner-column {
 }
 
 /* DEV STYLES */
-/* body * {
+ /* body * {
     border: 1px solid blue;
     padding: 1px;
-}
+} 
 
 header, footer, main {
     border: 4px solid red;
@@ -175,9 +175,13 @@ graphic-div text-content a{
 
 tiles .product-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 1em;
 }
+
+tiles div {
+    padding-bottom: 15px;
+}   
 
 product-card {
     display: block;
@@ -196,4 +200,21 @@ product-card {
 .quotes {
     background-color: var(--quote-background);
     color: var(--quote-text);
+}
+
+.quotes .normal-text {
+    color: var(--quote-text);
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.quotes text-content {
+    padding: 10px;
+    padding-top: 4rem;
+}
+
+.quotes div {
+    margin-top: 2rem;
+    font-style: italic;
+    text-align: right;
 }
