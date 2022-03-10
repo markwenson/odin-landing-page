@@ -99,7 +99,9 @@ graphic-div {
     border: 2px solid black;
 } */
 
-
+graphic-div {
+    border: 2px solid white;
+}
 /* TYPOGRAPHY */
 
 .large-text {
@@ -217,4 +219,52 @@ product-card {
     margin-top: 2rem;
     font-style: italic;
     text-align: right;
+}
+
+.call-to-action inner-column {
+    display: flex;
+    justify-content: center;
+}
+
+.call-to-action text-content {
+    border: 2px solid red;
+    display:block;
+    padding: 10px;
+    flex-grow: 1;
+    max-width: 750px;
+    padding: 1rem 2rem;
+}
+
+.call-to-action div {
+    display: flex;
+    border: 2px solid red;
+    justify-content: center;
+    align-items: center;
+}
+
+.call-to-action a {
+    border: 2px solid var(--white);
+    background-color: inherit;
+    color: var(--white);
+}
+.call-to-action graphic-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid green;
+    background-color: var(--light);
+}
+
+@media (min-width: 700px) {
+    .call-to-action graphic-div {
+    flex-direction: row;
+    }
+} 
+
+.call-to-action h1 {
+    font-family: sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--white);
 }
