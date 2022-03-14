@@ -145,7 +145,7 @@ header {
     font-family: sans-serif;
     font-size: 1rem;
     font-weight: 100;
-    line-height: 1;
+    line-height: 1.2;
 }
 
 .small-text {
@@ -160,10 +160,10 @@ header {
         font-size: 40px;
     }
     .normal-text {
-        font-size: 1.5rem;
+        font-size: 20px;
     }
     .small-text {
-        font-size: 1rem;
+        font-size: 15px;
     }
 }
 
@@ -231,6 +231,9 @@ product-card {
     display: block;
 }
 
+.product-list p {
+    margin-bottom: 10px;
+}
 .welcome {
     background-color: var(--dark);
     color: var(--white);
@@ -270,35 +273,45 @@ product-card {
 
 .call-to-action text-content {
     display:block;
-    padding: 10px;
     flex-grow: 1;
-    max-width: 750px;
-    padding: 1rem 2rem;
+    max-width: 780px;
+    padding: 1.5rem 2rem;
 }
 
 .call-to-action div {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .call-to-action a {
     background-color: inherit;
     color: var(--white);
+    border: 2.2px solid var(--white);
+    border-radius: 0.4rem;
 }
+
 .call-to-action graphic-div {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 98%;
     background-color: var(--light);
+    border: 2px solid var(--light);
+    border-radius: 10px;
 }
 
 @media (min-width: 700px) {
     .call-to-action graphic-div {
     flex-direction: row;
     }
+    .call-to-action text-content {
+    padding: 1rem 2.5rem;
+    }
+    .call-to-action div {
+        padding-right: 20px;
+    }
 } 
-
 
 .call-to-action h1 {
     font-family: sans-serif;
@@ -330,6 +343,7 @@ header-div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 10px;
 }
 
 header-div picture {
@@ -364,4 +378,14 @@ header-div ul {
     header-div ul {
         gap: 3rem;
     }
+}
+
+footer {
+    background-color: var(--dark);
+    padding: 16px;
+}
+
+footer div {
+    color: var(--quote-background);
+    text-align: center;
 }
