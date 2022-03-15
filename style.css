@@ -167,7 +167,9 @@ header {
     }
 }
 
-
+strong {
+    color: var(--quote-background);
+}
 
 /* COMPONENTS */
 .button {
@@ -200,6 +202,7 @@ graphic-div text-content {
 
 graphic-div text-content p{
     margin-top: 12px;
+    margin-bottom: 20px;
 }
 
 graphic-div text-content a{
@@ -217,6 +220,21 @@ graphic-div text-content a{
     }
 }    
 
+.welcome {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.welcome .normal-text {
+    font-size: 1.6rem;
+    font-weight: 200;
+    line-height: 1;
+}
+
+.welcome .button {
+    background-color: var(--button-color);
+    color: var(--white);
+}
 tiles .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -227,21 +245,16 @@ tiles div {
     padding-bottom: 15px;
 }   
 
+tiles text-content {
+    padding: 10px;
+}
+
 product-card {
     display: block;
 }
 
 .product-list p {
     margin-bottom: 10px;
-}
-.welcome {
-    background-color: var(--dark);
-    color: var(--white);
-}
-
-.welcome .button {
-    background-color: var(--button-color);
-    color: var(--white);
 }
 
 .quotes {
@@ -253,6 +266,7 @@ product-card {
     color: var(--quote-text);
     font-size: 1.5rem;
     font-weight: 200;
+    line-height: 1.1;
 }
 
 .quotes text-content {
